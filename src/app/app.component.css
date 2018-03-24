@@ -1,0 +1,82 @@
+
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #31fff7;
+  padding: 1rem;
+  min-height: 10rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+}
+
+.message-wrap {
+  color: grey;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.message-wrap>span {
+  display: inline-flex;
+  padding: 1rem;
+  max-width: 45%;
+  background: lightgreen;
+  border-radius: 15px;
+  text-transform: capitalize;
+  transition: 0.5s;
+  justify-content: space-between;
+  min-width: 10rem;
+  align-items: center;
+}
+
+.delete {
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.incoming-message {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.incoming-message > span {
+  background: rgb(253, 255, 117);
+}
+
+.control-block {
+  display: flex;
+  justify-content: center;
+}
+
+.control-block input {
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid #31fff7;
+  margin-right: 1rem;
+}
+
+.control-block button {
+  background: unset;
+  color: darkcyan;
+  border-radius: 10px;
+  border: 1px solid #31fff7;
+  cursor: pointer;
+}
+
+.control-block button:active {
+  border: 1px solid #31fff7;
+  border-radius: 10px;
+}
+
+.control-block button:target {
+  border: 1px solid #31fff7;
+  border-radius: 10px;
+}
+
+.control-block button:hover{
+  border: 1px solid #56ff5f;
+  border-radius: 10px;
+}

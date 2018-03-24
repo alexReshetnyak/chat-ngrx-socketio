@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
 
-
+import { SocketService } from './services/socket.service';
+import { ChatService } from './services/chat.service';
 import { AppComponent } from './app.component';
+import { messagesReducer } from './redux/messages.reducer';
 
 
 @NgModule({
@@ -10,9 +14,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    StoreModule.forRoot({messagePage: messagesReducer})
   ],
-  providers: [],
+  providers: [ SocketService, ChatService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
